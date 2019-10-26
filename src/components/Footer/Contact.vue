@@ -1,6 +1,6 @@
 <template>
     <v-content>
-        <v-card dark>
+        <v-card dark class="elevation-0">
             <v-card-title>Contacto</v-card-title>
             <v-list-item two-line>
 

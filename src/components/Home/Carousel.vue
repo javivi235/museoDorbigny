@@ -20,7 +20,6 @@ export default {
 #carousel{
     position: fixed;
     z-index:0;
-    padding-top: 10vh;
     height: 100vh !important;
 }
 

@@ -5,7 +5,7 @@
        <h1 id="projectTitle">{{projects[1].title}}</h1>
        <h5 id="projectBody">{{projects[1].body}}</h5>
 
-       <v-carousel id='projectCarousel' cycle='true'>
+       <v-carousel id='projectCarousel' hide-delimiters='true' cycle='true'>
            <v-carousel-item class="projectCarouselItem" src="@/assets/rana1.jpg"/>
            <v-carousel-item class="projectCarouselItem" src="@/assets/rana2.jpg"/>
            <v-carousel-item class="projectCarouselItem" src="@/assets/rana3.jpg"/>
@@ -45,7 +45,7 @@ export default {
         z-index:1;
         position: relative;
         top:100vh;
-        background-color: #FFFFFF;
+        background-color: #DEDEDE;
         height: 100vh;
     }
 

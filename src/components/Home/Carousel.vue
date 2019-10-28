@@ -1,6 +1,6 @@
 <template>
   <div >
-      <v-carousel id='carousel' cycle='true'>
+      <v-carousel id='carousel' :cycle='true'>
             <v-carousel-item  src="@/assets/test1.jpg"/>
             <v-carousel-item  src="@/assets/test2.jpg"/>
 
@@ -20,7 +20,6 @@ export default {
 #carousel{
     position: fixed;
     z-index:0;
-    padding-top: 10vh;
     height: 100vh !important;
 }
 

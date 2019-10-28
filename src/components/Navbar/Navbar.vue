@@ -40,8 +40,8 @@
 export default {
   data: function () {
     return {
-      color: 'white',
-      dark: false,
+      color: 'transparent',
+      dark: true,
       items: [
         {
           text: 'Publicaciones',

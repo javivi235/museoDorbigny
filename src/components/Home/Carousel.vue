@@ -12,15 +12,14 @@
 // @ is an alias to /src
 
 export default {
-  name: 'home',
-  components: {
-  }
 }
 </script>
 
 <style scoped>
 
 #carousel{
+    position: fixed;
+    z-index:0;
     padding-top: 10vh;
     height: 100vh !important;
 }

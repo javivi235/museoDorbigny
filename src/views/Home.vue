@@ -1,6 +1,9 @@
 <template>
   <div class="home">
     <Carousel/>
+    <Projects/>
+    <Footer/>
+
   </div>
 </template>
 
@@ -8,11 +11,15 @@
 // @ is an alias to /src
 
 import Carousel from '../components/Home/Carousel'
+import Projects from '../components/Home/Projects'
+import Footer from '../views/FooterView'
 
 export default {
   name: 'home',
   components: {
-    Carousel
+    Carousel,
+    Projects,
+    Footer
   }
 }
 </script>

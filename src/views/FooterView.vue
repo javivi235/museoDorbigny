@@ -34,6 +34,9 @@ export default {
 
 <style scoped>
 .footer {
-  background-color: #424242
+  position: relative;
+  background-color: #424242;
+  z-index: 1;
+  top:100vh;
 }
 </style>

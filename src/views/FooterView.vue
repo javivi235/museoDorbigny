@@ -38,6 +38,6 @@ export default {
   width: 100vw;
   background-color: #424242;
   z-index: 1;
-  top:200vh;
+  top:300vh;
 }
 </style>

@@ -40,8 +40,8 @@
 export default {
   data: function () {
     return {
-      color: 'transparent',
-      dark: true,
+      color: 'white',
+      dark: false,
       lastScrollPosition: 0,
       transparentNavbarViews: ['home'],
       items: [
@@ -67,6 +67,8 @@ export default {
   mounted: function () {
     if (this.transparentNavbarViews.includes(this.$route.name)) {
       window.addEventListener('scroll', this.onScroll)
+
+      this.setTheme('transparent', true)
     }
   },
   beforeDestroy () {
@@ -79,12 +81,14 @@ export default {
       const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
 
       if (currentScrollPosition > window.innerHeight) {
-        this.color = 'white'
-        this.dark = false
+        this.setTheme('white', false)
       } else {
-        this.color = 'transparent'
-        this.dark = true
+        this.setTheme('transparent', true)
       }
+    },
+    setTheme: function (color, dark) {
+      this.color = color
+      this.dark = dark
     },
     changeTheme: function () {
       this.color = this.color === 'white' ? 'transparent' : 'white'

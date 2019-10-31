@@ -42,6 +42,8 @@ export default {
     return {
       color: 'transparent',
       dark: true,
+      lastScrollPosition: 0,
+      transparentNavbarViews: ['home'],
       items: [
         {
           text: 'Publicaciones',
@@ -62,7 +64,28 @@ export default {
       ]
     }
   },
+  mounted: function () {
+    if (this.transparentNavbarViews.includes(this.$route.name)) {
+      window.addEventListener('scroll', this.onScroll)
+    }
+  },
+  beforeDestroy () {
+    if (this.transparentNavbarViews.includes(this.$route.name)) {
+      window.removeEventListener('scroll', this.onScroll)
+    }
+  },
   methods: {
+    onScroll: function () {
+      const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
+
+      if (currentScrollPosition > window.innerHeight) {
+        this.color = 'white'
+        this.dark = false
+      } else {
+        this.color = 'transparent'
+        this.dark = true
+      }
+    },
     changeTheme: function () {
       this.color = this.color === 'white' ? 'transparent' : 'white'
       this.dark = !this.dark
@@ -72,50 +95,56 @@ export default {
 </script>
 
 <style lang="scss">
-$black: #000000;
+  $black: #000000;
 
-$duration: 0.4s;
-$distance: 15px;
-$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  $duration: 0.4s;
+  $distance: 15px;
+  $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-.btn-text {
-  position: relative;
-  text-transform: uppercase;
-  text-decoration: none;
+  .btn-text {
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
 
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: 1px;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background-color: $black;
-  }
-  &:before {
-    opacity: 0;
-    transform: translateY(-$distance);
-    transition: transform 0s $easeOutBack, opacity 0s;
-  }
-  &:after {
-    opacity: 0;
-    transform: translateY($distance/2);
-    transition: transform $duration $easeOutBack, opacity $duration;
-  }
-  &:hover,
-  &:focus {
     &:before,
     &:after {
-      opacity: 1;
-      transform: translateY(0);
+      content: "";
+      position: absolute;
+      bottom: 1px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: $black;
     }
+
     &:before {
+      opacity: 0;
+      transform: translateY(-$distance);
+      transition: transform 0s $easeOutBack, opacity 0s;
+    }
+
+    &:after {
+      opacity: 0;
+      transform: translateY($distance/2);
       transition: transform $duration $easeOutBack, opacity $duration;
     }
-    &:after {
-      transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+
+    &:hover,
+    &:focus {
+
+      &:before,
+      &:after {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      &:before {
+        transition: transform $duration $easeOutBack, opacity $duration;
+      }
+
+      &:after {
+        transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+      }
     }
   }
-}
 </style>

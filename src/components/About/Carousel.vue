@@ -8,7 +8,7 @@
   >
     <v-carousel-item
     v-for="(image,i) in images"
-    :key="i"
+    :key="'aboutCarouselImage'+i"
     :src="image.src"
     >
     </v-carousel-item>

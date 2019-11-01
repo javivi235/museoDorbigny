@@ -5,7 +5,7 @@
        <h1 id="postTitle">{{posts[0].title}}</h1>
        <h5 id="postBody">{{posts[0].body}}</h5>
 
-       <v-carousel id='postCarousel' hide-delimiters='true' cycle='true'>
+       <v-carousel id='postCarousel' hide-delimiters='true' cycle=true>
            <v-carousel-item class="postCarouselItem" src="@/assets/museo1.jpg"/>
            <v-carousel-item class="postCarouselItem" src="@/assets/museo2.jpg"/>
            <v-carousel-item class="postCarouselItem" src="@/assets/museo3.jpg"/>

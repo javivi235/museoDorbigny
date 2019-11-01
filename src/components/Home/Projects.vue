@@ -5,7 +5,7 @@
        <h1 id="projectTitle">{{projects[1].title}}</h1>
        <h5 id="projectBody">{{projects[1].body}}</h5>
 
-       <v-carousel id='projectCarousel' hide-delimiters='true' cycle='true'>
+       <v-carousel id='projectCarousel' hide-delimiters='true' cycle=true>
            <v-carousel-item class="projectCarouselItem" src="@/assets/rana1.jpg"/>
            <v-carousel-item class="projectCarouselItem" src="@/assets/rana2.jpg"/>
            <v-carousel-item class="projectCarouselItem" src="@/assets/rana3.jpg"/>

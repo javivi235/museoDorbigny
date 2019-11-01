@@ -1,6 +1,6 @@
 <template>
   <div >
-      <v-carousel height=100vh id='carousel' cycle= true>
+      <v-carousel id='carousel' cycle= true>
             <v-carousel-item src="@/assets/test1.jpg"/>
             <v-carousel-item src="@/assets/test2.jpg"/>
 

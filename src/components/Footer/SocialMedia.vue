@@ -8,16 +8,16 @@
                 <v-col cols="1">
                 </v-col>
                 <v-col cols="1">
-                  <v-icon class="icon" large @click="openInstagram">mdi-instagram</v-icon>
+                  <v-icon class="icon" id="instagram" large @click="openInstagram">mdi-instagram</v-icon>
                 </v-col>
                 <v-col cols="1">
-                  <v-icon class="icon" large @click="openFacebook">mdi-facebook</v-icon>
+                  <v-icon class="icon" id="facebook" large @click="openFacebook">mdi-facebook</v-icon>
                 </v-col>
                 <v-col cols="1">
-                  <v-icon class="icon" large @click="openTwitter">mdi-twitter</v-icon>
+                  <v-icon class="icon" id="twitter" large @click="openTwitter">mdi-twitter</v-icon>
                 </v-col>
                 <v-col cols="1">
-                  <v-icon class="icon" large @click="openWhatsApp">mdi-whatsapp</v-icon>
+                  <v-icon class="icon" id="whatsapp" large @click="openWhatsApp">mdi-whatsapp</v-icon>
                 </v-col>
             </v-row>
         </v-card>

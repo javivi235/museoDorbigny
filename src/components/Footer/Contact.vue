@@ -6,7 +6,7 @@
 
                 <v-list-item-content>
                     <v-list-item-title class="headline">Email</v-list-item-title>
-                    <v-list-item-subtitle>info@museodorbigny.org</v-list-item-subtitle>
+                    <v-list-item-subtitle id="email">info@museodorbigny.org</v-list-item-subtitle>
                 </v-list-item-content>
 
             </v-list-item>
@@ -15,7 +15,7 @@
 
                 <v-list-item-content>
                     <v-list-item-title class="headline">Teléfono</v-list-item-title>
-                    <v-list-item-subtitle>(+591 4) 44 8 6969</v-list-item-subtitle>
+                    <v-list-item-subtitle id="number">(+591 4) 44 8 6969</v-list-item-subtitle>
                 </v-list-item-content>
             </v-list-item>
 
@@ -23,9 +23,9 @@
 
                 <v-list-item-content>
                     <v-list-item-title class="headline">Dirección</v-list-item-title>
-                    <v-list-item-subtitle>Museo de Historia Natural Alcide d'Orbigny</v-list-item-subtitle>
-                    <v-list-item-subtitle>Av. Potosi Nº 1458</v-list-item-subtitle>
-                    <v-list-item-subtitle>Cochabamba - Bolivia</v-list-item-subtitle>
+                    <v-list-item-subtitle id="name">Museo de Historia Natural Alcide d'Orbigny</v-list-item-subtitle>
+                    <v-list-item-subtitle id="adress">Av. Potosi Nº 1458</v-list-item-subtitle>
+                    <v-list-item-subtitle id="city">Cochabamba - Bolivia</v-list-item-subtitle>
                 </v-list-item-content>
             </v-list-item>
         </v-card>

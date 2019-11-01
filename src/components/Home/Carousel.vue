@@ -1,8 +1,8 @@
 <template>
   <div >
-      <v-carousel id='carousel' cycle= true>
-            <v-carousel-item src="@/assets/test1.jpg"/>
-            <v-carousel-item src="@/assets/test2.jpg"/>
+      <v-carousel id='carousel' :cycle='true'>
+            <v-carousel-item  src="@/assets/test1.jpg"/>
+            <v-carousel-item  src="@/assets/test2.jpg"/>
 
       </v-carousel>
   </div>

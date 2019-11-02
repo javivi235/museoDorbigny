@@ -43,7 +43,7 @@ export default {
       color: 'white',
       dark: false,
       lastScrollPosition: 0,
-      transparentNavbarViews: ['home'],
+      transparentNavbarViews: ['home', 'about'],
       items: [
         {
           text: 'Publicaciones',
@@ -59,7 +59,7 @@ export default {
         },
         {
           text: 'Contáctanos',
-          to: '/'
+          to: '/contact'
         }
       ]
     }
@@ -96,6 +96,19 @@ export default {
     },
     navigateTo (to) {
       this.$router.push(to)
+    }
+  },
+  watch: {
+    $route (to, from) {
+      if (this.transparentNavbarViews.includes(this.$route.name)) {
+        window.addEventListener('scroll', this.onScroll)
+
+        this.setTheme('transparent', true)
+      } else {
+        window.removeEventListener('scroll', this.onScroll)
+
+        this.setTheme('white', false)
+      }
     }
   }
 }

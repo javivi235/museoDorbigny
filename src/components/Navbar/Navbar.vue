@@ -55,7 +55,7 @@ export default {
         },
         {
           text: 'Acerca de',
-          to: '/'
+          to: '/about'
         },
         {
           text: 'Contáctanos',

@@ -1,5 +1,5 @@
 <template>
-    <div class="footer">
+    <div :style="style" class="footer">
         <v-content class="content">
             <v-row>
                 <v-col cols:6>
@@ -25,9 +25,17 @@
 import Contact from '../components/Footer/Contact'
 import SocialMedia from '../components/Footer/SocialMedia'
 export default {
+  props: {
+    topM: String
+  },
   components: {
     Contact,
     SocialMedia
+  },
+  computed: {
+    style () {
+      return 'top: ' + this.topM + 'vh;'
+    }
   }
 }
 </script>
@@ -36,9 +44,9 @@ export default {
 .footer {
   position: absolute;
   width: 100vw;
+  height: 100vh;
   background-color: #424242;
   z-index: 1;
-  top:300vh;
 }
 .content {
   margin-top: 25vh;

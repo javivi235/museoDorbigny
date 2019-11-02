@@ -1,6 +1,6 @@
 <template>
     <div class="footer">
-        <v-content>
+        <v-content class="content">
             <v-row>
                 <v-col cols:6>
                     <Contact/>
@@ -12,7 +12,7 @@
             <v-row>
                 <v-col cols="5"></v-col>
                 <v-col>
-                  <v-card dark class="elevation-0">
+                  <v-card dark class="elevation-0 copyrigth">
                     <v-card-text>Copyright © 2019 </v-card-text>
                   </v-card>
                 </v-col>
@@ -39,5 +39,12 @@ export default {
   background-color: #424242;
   z-index: 1;
   top:300vh;
+}
+.content {
+  margin-top: 25vh;
+  margin-left: 10vw;
+}
+.copyrigth {
+  margin-top: 15vh;
 }
 </style>

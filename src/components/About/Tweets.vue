@@ -5,7 +5,7 @@
                 <v-col cols="1">
                 </v-col>
                 <v-col ref="div">
-                    <a class="twitter-timeline" data-width="100vw" data-height="100vh" data-dnt="true" data-theme="ligth" href="https://twitter.com/MuseodOrbigny?ref_src=twsrc%5Etfw">Tweets by MuseodOrbigny</a>
+                    <a class="twitter-timeline" data-width="100vw" data-height="98vh" data-dnt="true" data-theme="ligth" href="https://twitter.com/MuseodOrbigny?ref_src=twsrc%5Etfw">Tweets by MuseodOrbigny</a>
                 </v-col>
             </v-row>
         </v-content>

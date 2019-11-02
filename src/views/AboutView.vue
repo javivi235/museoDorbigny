@@ -9,22 +9,40 @@
     :content="quienesSomos.content"
     :img="quienesSomos.img"/>
     <Information
-    id="Vision"
+    id="Mision"
     color="#DEDEDE"
+    :overview="mision.overview"
+    :title="mision.title"
+    :content="mision.content"
+    :img="mision.img"
+    />
+    <Information
+    id="Vision"
+    color="#FFFFFF"
     :overview="vision.overview"
     :title="vision.title"
     :content="vision.content"
     :img="vision.img"
     />
+    <History
+    id="History"
+    color="#DEDEDE"
+    :items="history"
+    />
+    <FooterView topM="600"/>
   </div>
 </template>
 <script>
 import Carousel from '../components/About/Carousel.vue'
 import Information from '../components/About/Information.vue'
+import History from '../components/About/History.vue'
+import FooterView from '../views/FooterView.vue'
 export default {
   components: {
     Carousel,
-    Information
+    Information,
+    History,
+    FooterView
   },
   data: () => ({
     imagesC: [
@@ -45,10 +63,33 @@ export default {
     },
     vision: {
       overview: 'Nuestra Vision',
-      title: 'TRABAJAMOS PARA CONSEVAR LA BIODIVERSIDAD DE BOLIVIA',
+      title: 'CUIDAMOS LA VIDA',
       content: 'Moldear nuestro futuro con nuevos conocimientos que conserven el patrimonio natural, difundiendo las investigaciones científicas de manera accesible, para la preservación de la naturaleza y la biodiversidad en Bolivia.',
       img: require('@/assets/vision.png')
-    }
+    },
+    mision: {
+      overview: 'Nuestra Mision',
+      title: 'TRABAJAMOS PARA CONSEVAR LA BIODIVERSIDAD DE BOLIVIA',
+      content: 'Incrementar el conocimiento científico, mediante una institución permanente, sin fines de lucro que conserva, investiga y difunde el patrimonio de las ciencias naturales para el bien de la sociedad y su desarrollo.',
+      img: require('@/assets/mision.png')
+    },
+    history: [
+      {
+        img: require('@/assets/History1.png'),
+        title: 'Todo empezo en el año 1987...',
+        content: 'Gracias al esfuerzo de algunos científicos cochabambinos, el año 1987, crearon la Fundación para la Ciencia, institución que por más de 20 años gestionó la creación del Museo de Historia Natural de Cochabamaba.'
+      },
+      {
+        img: require('@/assets/History2.png'),
+        title: 'En el año 1997...',
+        content: 'Se logra la firma de un convenio interinstitucional entre la Universidad Mayor de San Simón, la Alcaldía Municipal de Cochabama y la Fundación para la Ciencia para la creación del museo que funciona en los ambientes de la primera planta de la denominada casa Hass (Av. Potosí Nº1458)'
+      },
+      {
+        img: require('@/assets/History3.png'),
+        title: 'Finalmente en 2003...',
+        content: 'Posteriormente el 29 de enero del año 2003, se lográ inaugurar el Museo de Historia Natural "Alcide d\'Orbigny" de Cochabamba a la cabeza de Ricardo Céspedes Paz. Hoy a más de quince años de trabajo el museo sigue luchando por la conservación de la biodiversidad boliviana.'
+      }
+    ]
   })
 }
 </script>
@@ -62,6 +103,14 @@ export default {
   z-index: 1;
 }
 #Vision {
+  position: relative;
+  z-index: 1;
+}
+#Mision {
+  position: relative;
+  z-index: 1;
+}
+#History {
   position: relative;
   z-index: 1;
 }

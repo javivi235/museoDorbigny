@@ -29,6 +29,9 @@
     color="#DEDEDE"
     :items="history"
     />
+    <Tweets
+    id="Tweets"
+    color="#FFFFFF"/>
     <FooterView topM="600"/>
   </div>
 </template>
@@ -37,12 +40,14 @@ import Carousel from '../components/About/Carousel.vue'
 import Information from '../components/About/Information.vue'
 import History from '../components/About/History.vue'
 import FooterView from '../views/FooterView.vue'
+import Tweets from '../components/About/Tweets.vue'
 export default {
   components: {
     Carousel,
     Information,
     History,
-    FooterView
+    FooterView,
+    Tweets
   },
   data: () => ({
     imagesC: [
@@ -111,6 +116,10 @@ export default {
   z-index: 1;
 }
 #History {
+  position: relative;
+  z-index: 1;
+}
+#Tweets {
   position: relative;
   z-index: 1;
 }

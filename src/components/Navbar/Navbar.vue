@@ -10,7 +10,7 @@
       <v-spacer></v-spacer>
 
       <v-toolbar-items class="hidden-sm-and-down">
-        <v-btn text v-for="item in items" v-bind:key="item.text">
+        <v-btn text v-for="item in items" v-bind:key="item.text" @click="navigateTo(item.to)">
           <span class="btn-text">{{ item.text }}</span>
         </v-btn>
         <v-btn icon @click="changeTheme">
@@ -26,7 +26,7 @@
         </template>
         <v-list>
           <v-list-item v-for="item in items" :key="item.text">
-            <v-btn text>
+            <v-btn text @click="navigateTo(item.to)">
               <span class="btn-text">{{ item.text }}</span>
             </v-btn>
           </v-list-item>
@@ -93,6 +93,9 @@ export default {
     changeTheme: function () {
       this.color = this.color === 'white' ? 'transparent' : 'white'
       this.dark = !this.dark
+    },
+    navigateTo (to) {
+      this.$router.push(to)
     }
   }
 }

@@ -22,4 +22,8 @@ export default {
 }
 </script>
 <style scoped>
+  #carouselAbout {
+    position: fixed;
+    z-index:0;
+  }
 </style>

@@ -1,6 +1,7 @@
 <template>
   <v-carousel
   height=100vh
+  width=100vw
   id='carouselAbout'
   :cycle='true'
   hide-delimiters

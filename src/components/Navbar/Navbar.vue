@@ -114,7 +114,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   $black: #000000;
 
   $duration: 0.4s;

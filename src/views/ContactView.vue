@@ -22,15 +22,13 @@ export default {
     Form,
     Map,
     FooterView
+  },
+  methods: {
   }
 }
 </script>
 
 <style scoped>
-.contact{
-  margin-top: 7vh;
-}
-
 .contact-row{
   background-image: url('../assets/museo1.png');
 }

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar fixed :color="color" :dark="dark">
+    <v-app-bar ref="navbar" fixed :color="color" :dark="dark" :app="app">
       <v-btn color="transparent" text to="/">
         <v-img class="mx-2" src="@/assets/logo.jpg" max-height="60" max-width="60" contain></v-img>
       </v-btn>
@@ -42,6 +42,7 @@ export default {
     return {
       color: 'white',
       dark: false,
+      app: false,
       lastScrollPosition: 0,
       transparentNavbarViews: ['home', 'about'],
       items: [
@@ -104,10 +105,12 @@ export default {
         window.addEventListener('scroll', this.onScroll)
 
         this.setTheme('transparent', true)
+        this.app = false
       } else {
         window.removeEventListener('scroll', this.onScroll)
 
         this.setTheme('white', false)
+        this.app = true
       }
     }
   }

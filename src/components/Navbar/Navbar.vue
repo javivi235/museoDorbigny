@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar fixed :color="color" :dark="dark">
+    <v-app-bar ref="navbar" fixed :color="color" :dark="dark" :app="app">
       <v-btn color="transparent" text to="/">
         <v-img class="mx-2" src="@/assets/logo.jpg" max-height="60" max-width="60" contain></v-img>
       </v-btn>
@@ -42,8 +42,9 @@ export default {
     return {
       color: 'white',
       dark: false,
+      app: false,
       lastScrollPosition: 0,
-      transparentNavbarViews: ['home'],
+      transparentNavbarViews: ['home', 'about'],
       items: [
         {
           text: 'Publicaciones',
@@ -59,7 +60,7 @@ export default {
         },
         {
           text: 'Contáctanos',
-          to: '/'
+          to: '/contact'
         }
       ]
     }
@@ -69,6 +70,8 @@ export default {
       window.addEventListener('scroll', this.onScroll)
 
       this.setTheme('transparent', true)
+    } else {
+      this.app = true
     }
   },
   beforeDestroy () {
@@ -97,11 +100,26 @@ export default {
     navigateTo (to) {
       this.$router.push(to)
     }
+  },
+  watch: {
+    $route (to, from) {
+      if (this.transparentNavbarViews.includes(this.$route.name)) {
+        window.addEventListener('scroll', this.onScroll)
+
+        this.setTheme('transparent', true)
+        this.app = false
+      } else {
+        window.removeEventListener('scroll', this.onScroll)
+
+        this.setTheme('white', false)
+        this.app = true
+      }
+    }
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   $black: #000000;
 
   $duration: 0.4s;

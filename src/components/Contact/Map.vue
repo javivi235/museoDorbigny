@@ -1,5 +1,5 @@
 <template>
-    <GmapMap :center="{lat, lng}" :zoom="15" style="width: 100vw; height: 100vh">
+    <GmapMap :center="{lat, lng}" :zoom="15" style="width: 50vw; height: 100vh">
         <GmapMarker :position="google && new google.maps.LatLng(lat, lng)" :clickable="true" />
     </GmapMap>
 </template>

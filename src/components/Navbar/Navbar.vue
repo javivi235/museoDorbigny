@@ -70,6 +70,8 @@ export default {
       window.addEventListener('scroll', this.onScroll)
 
       this.setTheme('transparent', true)
+    } else {
+      this.app = true
     }
   },
   beforeDestroy () {

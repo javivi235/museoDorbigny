@@ -1,13 +1,19 @@
 <template>
-  <div class="contact">
-    <v-row no-gutters>
-      <v-col class="contact-row">
-        <Form class="mt-10"></Form>
-      </v-col>
-      <v-col>
-        <Map></Map>
-      </v-col>
-    </v-row>
+  <div>
+    <div class="hidden-sm-and-down">
+      <v-row no-gutters>
+        <v-col class="contact-row">
+          <Form class="mt-10"></Form>
+        </v-col>
+        <v-col>
+          <Map></Map>
+        </v-col>
+      </v-row>
+    </div>
+    <div class="hidden-md-and-up contact-row">
+      <Form></Form>
+      <Map></Map>
+    </div>
     <FooterView/>
   </div>
 </template>

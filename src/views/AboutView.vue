@@ -1,6 +1,6 @@
 <template>
-  <div class="page">
-    <Carousel :images="imagesC"/>
+  <div>
+    <Carousel id="AboutCarousel" :images="imagesC"/>
     <Information
     id="QuienesSomos"
     color="#FFFFFF"
@@ -32,7 +32,7 @@
     <Tweets
     id="Tweets"
     color="#FFFFFF"/>
-    <FooterView topM="600"/>
+    <FooterView id="Footer" topM="599"/>
   </div>
 </template>
 <script>
@@ -99,9 +99,6 @@ export default {
 }
 </script>
 <style scoped>
-.page {
-  overflow: scroll;
-}
 #QuienesSomos {
   position: relative;
   margin-top: 100vh;
@@ -122,5 +119,11 @@ export default {
 #Tweets {
   position: relative;
   z-index: 1;
+}
+#AboutCarousel {
+  position: fixed;
+  top: 0vh;
+  left: 0vw;
+  z-index: 0;
 }
 </style>

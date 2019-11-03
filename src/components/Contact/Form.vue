@@ -7,14 +7,18 @@
                 <form>
                     <v-text-field
                         label="Nombre"
+                        v-model="name"
                         required
                     ></v-text-field>
                     <v-text-field
                         label="Correo electrónico"
+                        v-model="email"
                         required
                     ></v-text-field>
                     <v-textarea
                     color="teal"
+                    v-model="message"
+                    required
                     >
                     <template v-slot:label>
                         <div>
@@ -22,9 +26,32 @@
                         </div>
                     </template>
                     </v-textarea>
-                    <v-btn class="success mt-3">Enviar</v-btn>
+                    <v-btn class="success mt-3" @click="saveMessage">Enviar</v-btn>
                 </form>
             </v-card-text>
         </v-card>
     </v-container>
 </template>
+
+<script>
+export default {
+  data: function () {
+    return {
+      name: '',
+      email: '',
+      message: ''
+    }
+  },
+  methods: {
+    saveMessage: function () {
+      let message = {
+        'name': this.name,
+        'email': this.email,
+        'message': this.message
+      }
+
+      console.log('Guardando...', message)
+    }
+  }
+}
+</script>

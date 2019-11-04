@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import AboutView from '../views/AboutView.vue'
 import ContactView from '../views/ContactView.vue'
 import SectionView from '../views/SectionView.vue'
+import SingleSection from '../components/Section/SingleSection.vue'
 
 Vue.use(VueRouter)
 
@@ -27,6 +28,11 @@ const routes = [
     path: '/sections',
     name: 'sections',
     component: SectionView
+  },
+  {
+    path: '/singleSection',
+    name: 'section',
+    component: SingleSection
   }
 ]
 

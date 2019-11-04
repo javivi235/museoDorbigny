@@ -52,7 +52,7 @@ export default {
         },
         {
           text: 'Secciones',
-          to: '/'
+          to: '/sections'
         },
         {
           text: 'Acerca de',

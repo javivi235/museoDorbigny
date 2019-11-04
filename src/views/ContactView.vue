@@ -14,7 +14,7 @@
       <Form></Form>
       <Map></Map>
     </div>
-    <FooterView/>
+    <FooterView topM="100"/>
   </div>
 </template>
 

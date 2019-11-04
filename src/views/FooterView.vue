@@ -9,7 +9,7 @@
                     <SocialMedia/>
                 </v-col>
             </v-row>
-            <v-row>
+            <v-row class="grey1">
                 <v-col cols="5"></v-col>
                 <v-col>
                   <v-card dark class="elevation-0 copyrigth">
@@ -54,5 +54,9 @@ export default {
 }
 .copyrigth {
   margin-top: 15vh;
+}
+.grey1 {
+  background-color: #424242;
+  margin-left: -10vw;
 }
 </style>

@@ -11,7 +11,7 @@
            <v-carousel-item class="projectCarouselItem" src="@/assets/rana3.jpg"/>
        </v-carousel>
 
-       <v-btn id="project-goButton" outlined='true'>Ver Mas</v-btn>
+       <v-btn id="goButton" outlined='true'>Ver Mas</v-btn>
   </div>
 </template>
 

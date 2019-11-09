@@ -1,7 +1,7 @@
 <template>
   <div>
-    <v-app-bar ref="navbar" fixed :color="color" :dark="dark" :app="app">
-      <v-btn color="transparent" text to="/">
+    <v-app-bar ref="navbar" id="navBar" fixed :color="color" :dark="dark" :app="app">
+      <v-btn color="transparent" id="navbar-home" text to="/">
         <v-img class="mx-2" src="@/assets/logo.jpg" max-height="60" max-width="60" contain></v-img>
       </v-btn>
 
@@ -10,7 +10,7 @@
       <v-spacer></v-spacer>
 
       <v-toolbar-items class="hidden-sm-and-down">
-        <v-btn text v-for="item in items" v-bind:key="item.text" @click="navigateTo(item.to)">
+        <v-btn text v-for="item in items" :id="item.id" v-bind:key="item.text" @click="navigateTo(item.to)">
           <span class="btn-text">{{ item.text }}</span>
         </v-btn>
         <v-btn icon @click="changeTheme">
@@ -25,7 +25,7 @@
           </v-btn>
         </template>
         <v-list>
-          <v-list-item v-for="item in items" :key="item.text">
+          <v-list-item v-for="item in items" :id="item.id" :key="item.text">
             <v-btn text @click="navigateTo(item.to)">
               <span class="btn-text">{{ item.text }}</span>
             </v-btn>
@@ -47,18 +47,22 @@ export default {
       transparentNavbarViews: ['home', 'about'],
       items: [
         {
+          id: 'nav-publications',
           text: 'Publicaciones',
           to: '/'
         },
         {
+          id: 'nav-sections',
           text: 'Secciones',
           to: '/sections'
         },
         {
+          id: 'nav-about',
           text: 'Acerca de',
           to: '/about'
         },
         {
+          id: 'nav-contact',
           text: 'Contáctanos',
           to: '/contact'
         }

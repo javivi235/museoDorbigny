@@ -1,6 +1,6 @@
 <template>
     <v-content>
-        <v-card dark class="elevation-0">
+        <v-card id="f-social" dark class="elevation-0">
             <v-card-title>
                 Redes Sociales:
             </v-card-title>
@@ -8,16 +8,16 @@
                 <v-col cols="1">
                 </v-col>
                 <v-col cols="1">
-                  <v-icon class="icon" id="instagram" large @click="openInstagram">mdi-instagram</v-icon>
+                  <v-icon class="icon" id="f-instagram" large @click="openInstagram">mdi-instagram</v-icon>
                 </v-col>
                 <v-col cols="1">
-                  <v-icon class="icon" id="facebook" large @click="openFacebook">mdi-facebook</v-icon>
+                  <v-icon class="icon" id="f-facebook" large @click="openFacebook">mdi-facebook</v-icon>
                 </v-col>
                 <v-col cols="1">
-                  <v-icon class="icon" id="twitter" large @click="openTwitter">mdi-twitter</v-icon>
+                  <v-icon class="icon" id="f-twitter" large @click="openTwitter">mdi-twitter</v-icon>
                 </v-col>
                 <v-col cols="1">
-                  <v-icon class="icon" id="whatsapp" large @click="openWhatsApp">mdi-whatsapp</v-icon>
+                  <v-icon class="icon" id="f-whatsapp" large @click="openWhatsApp">mdi-whatsapp</v-icon>
                 </v-col>
             </v-row>
         </v-card>

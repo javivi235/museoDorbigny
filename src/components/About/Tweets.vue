@@ -1,5 +1,5 @@
 <template>
-    <div :style="style">
+    <div id="about-twitter" :style="style">
         <v-content>
             <v-row>
                 <v-col cols="1">

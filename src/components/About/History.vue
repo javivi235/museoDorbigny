@@ -1,6 +1,6 @@
 <template>
     <div :style="style">
-        <v-container>
+        <v-container id="about-history">
             <v-row>
                 <v-col
                 v-for="(item, i) in items"

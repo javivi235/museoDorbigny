@@ -1,5 +1,5 @@
 <template>
-    <div class= "contenedor" :style="style">
+    <div class= "contenedor" id="about-information" :style="style">
         <v-container class= "contenedor">
             <v-row class= "contenedor">
                 <v-col cols="6">

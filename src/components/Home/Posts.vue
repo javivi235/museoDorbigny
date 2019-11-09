@@ -11,7 +11,7 @@
            <v-carousel-item class="postCarouselItem" src="@/assets/museo3.jpg"/>
        </v-carousel>
 
-       <v-btn id="goButton" outlined='true'>Ver Mas</v-btn>
+       <v-btn id="post-goButton" outlined='true'>Ver Mas</v-btn>
   </div>
 </template>
 

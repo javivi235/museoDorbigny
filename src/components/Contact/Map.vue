@@ -1,5 +1,5 @@
 <template>
-  <GmapMap
+  <GmapMap id="contact-map"
     :center="{'lat': markers[0].latitude, 'lng': markers[0].longitude}"
     :zoom="17"
     style="width: 100%; height: 100vh"

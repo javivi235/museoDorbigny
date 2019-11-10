@@ -49,7 +49,7 @@ export default {
         {
           id: 'nav-publications',
           text: 'Publicaciones',
-          to: '/'
+          to: '/publications'
         },
         {
           id: 'nav-sections',

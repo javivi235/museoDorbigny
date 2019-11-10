@@ -5,6 +5,8 @@ import AboutView from '../views/AboutView.vue'
 import ContactView from '../views/ContactView.vue'
 import SectionView from '../views/SectionView.vue'
 import SingleSection from '../components/Section/SingleSection.vue'
+import PublicationView from '../views/PublicationView.vue'
+import PostView from '../views/PostView.vue'
 
 Vue.use(VueRouter)
 
@@ -33,6 +35,16 @@ const routes = [
     path: '/singleSection',
     name: 'section',
     component: SingleSection
+  },
+  {
+    path: '/publications',
+    name: 'publications',
+    component: PublicationView
+  },
+  {
+    path: '/post',
+    name: 'post',
+    component: PostView
   }
 ]
 

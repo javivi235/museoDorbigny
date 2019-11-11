@@ -1,7 +1,7 @@
 <template>
-  <div class="post pl-10 pr-10">
+  <div class="pl-10 pr-10">
     <p v-if="error">No se encontró ninguna publicación</p>
-    <v-content class="pa-10">
+    <v-content class="post pa-10">
       <h2>{{ title }}</h2>
       <div v-html="html"></div>
     </v-content>
@@ -35,8 +35,7 @@ export default {
           converter.setOption('simplifiedAutoLink', true)
 
           this.html = converter.makeHtml(response.data[0].cuerpo)
-          this.html = this.html.replace(/<img/g, '<img style="width: 100%; height: auto;"')
-          console.log(this.html)
+          this.html = this.html.replace(/<img/g, '<img style="width: 75%; height: auto;"')
 
           this.title = response.data[0].titulo
         } else {
@@ -46,3 +45,10 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.post {
+  width: 75vw;
+  margin: 0 auto
+}
+</style>

@@ -32,6 +32,14 @@ export default {
       .get(backendURL + '/publicaciones')
       .then(response => {
         this.posts = response.data
+
+        if (this.posts.length > 0) {
+          var dateFormat = require('dateformat')
+
+          for (let post of this.posts) {
+            post.created_at = dateFormat(post.created_at, 'dd/mm/yyyy HH:MM')
+          }
+        }
       })
   }
 }

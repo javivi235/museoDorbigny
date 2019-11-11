@@ -6,14 +6,14 @@ import vuetify from './plugins/vuetify'
 
 import * as VueGoogleMaps from 'vue2-google-maps'
 
+Vue.config.productionTip = false
+
 Vue.use(VueGoogleMaps, {
   load: {
     key: 'AIzaSyBhZaIj5dqkj1kuh36dQ2QB7MU9Ar5Hj78',
     libraries: 'places'
   }
 })
-
-Vue.config.productionTip = false
 
 new Vue({
   router,

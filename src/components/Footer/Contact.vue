@@ -57,7 +57,7 @@ export default {
         this.phone = contactInfo.telefono
         this.email = contactInfo.email
         this.address = contactInfo.direccion
-        this.city = contactInfo.city
+        this.city = contactInfo.ciudad
       })
   }
 }

@@ -7,6 +7,7 @@ import SectionView from '../views/SectionView.vue'
 import SingleSection from '../components/Section/SingleSection.vue'
 import PublicationView from '../views/PublicationView.vue'
 import PostView from '../views/PostView.vue'
+import ProjectView from '../views/ProjectView.vue'
 
 Vue.use(VueRouter)
 
@@ -45,6 +46,11 @@ const routes = [
     path: '/post',
     name: 'post',
     component: PostView
+  },
+  {
+    path: '/projects',
+    name: 'projects',
+    component: ProjectView
   }
 ]
 

@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     readMore: function () {
-      this.$router.push('/post?id=' + this.postID)
+      this.$router.push('/post?id=' + this.postID + '&type=publicaciones')
     }
   }
 }

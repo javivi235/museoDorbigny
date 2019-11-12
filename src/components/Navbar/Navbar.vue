@@ -47,6 +47,11 @@ export default {
       transparentNavbarViews: ['home', 'about'],
       items: [
         {
+          id: 'nav-projects',
+          text: 'Proyectos',
+          to: '/projects'
+        },
+        {
           id: 'nav-publications',
           text: 'Publicaciones',
           to: '/publications'

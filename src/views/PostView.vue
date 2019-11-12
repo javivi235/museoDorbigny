@@ -23,9 +23,10 @@ export default {
   },
   mounted: function () {
     let id = this.$route.query.id
+    let type = this.$route.query.type
 
     axios
-      .get(backendURL + '/publicaciones?id=' + id)
+      .get(backendURL + '/' + type + '?id=' + id)
       .then(response => {
         if (response.data.length === 1) {
           this.error = false

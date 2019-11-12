@@ -1,6 +1,5 @@
 <template>
   <div class="publication-view mt-10 ml-5">
-    <h3>Nuestras publicaciones</h3>
     <PostCard v-for="post in posts" v-bind:key="post.id"
       :id="'post-card-' + post.id"
       :postID="post.id"
@@ -45,6 +44,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-</style>

@@ -31,7 +31,7 @@ export default {
     axios
       .get(backendURL + '/publicaciones')
       .then(response => {
-        this.posts = response.data
+        this.posts = response.data.reverse()
 
         if (this.posts.length > 0) {
           var dateFormat = require('dateformat')

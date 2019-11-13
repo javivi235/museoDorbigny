@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-card class="mx-auto" max-width="70vw">
+    <v-card class="mx-auto" width="50vw">
       <v-img class="white--text align-end" :src="getImageURL()">
         <v-card-title>{{ title }}</v-card-title>
       </v-img>

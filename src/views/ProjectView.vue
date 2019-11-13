@@ -30,7 +30,7 @@ export default {
     axios
       .get(backendURL + '/proyectos')
       .then(response => {
-        this.projects = response.data
+        this.projects = response.data.reverse()
       })
   }
 }

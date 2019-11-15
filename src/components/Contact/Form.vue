@@ -34,6 +34,10 @@
 </template>
 
 <script>
+import axios from 'axios'
+
+import { backendURL } from '@/data.js'
+
 export default {
   data: function () {
     return {
@@ -45,12 +49,16 @@ export default {
   methods: {
     saveMessage: function () {
       let message = {
-        'name': this.name,
-        'email': this.email,
-        'message': this.message
+        'nombre': this.name,
+        'correo': this.email,
+        'mensaje': this.message
       }
 
-      console.log('Guardando...', message)
+      axios.post(backendURL + '/contactos', message)
+
+      this.name = ''
+      this.email = ''
+      this.message = ''
     }
   }
 }
